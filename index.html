@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            min-height: 100vh;
+            text-align: center;
+            
+        }
+        .row{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>refresh now</h1>
+        <div class="row">
+            <div class="cont1">
+                <img src="" alt="">
+                <h1>Player 1</h1>
+            </div>
+            <div class="cont2">
+                <img src="" alt="">
+                <h1>Player 2</h1>
+        </div>
+    </div>
+    </div>
+    
+</body>
+<script>
+    var num1=Math.floor(Math.random()*6)+1;
+    console.log(num1)
+    var s1=num1+".png"
+    var a=document.querySelector(".cont1 img");
+    a.setAttribute("src",s1);
+
+    var num2=Math.floor(Math.random()*6)+1;
+    console.log(num2)
+    var s2=num2+".png"
+    var b=document.querySelector(".cont2 img");
+    b.setAttribute("src",s2)
+
+    var c=document.querySelector(".container h1")
+    if(num1<num2){
+        c.innerHTML="<h1>Player 2 Won!";
+    }
+    else if(num1>num2){
+        c.innerHTML="<h1>Player 1 Won!";
+    }
+    else{
+        c.innerHTML="<h1>Draw!";
+    }
+</script>
+</html>
